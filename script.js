@@ -24,7 +24,9 @@ function selectSeat(seat) {
 }
 
 seats.forEach(seat => {
-    seat.addEventListener("click", () => { selectSeat(seat) })
+    if (seat.classList != "seat occupied") {
+        seat.addEventListener("click", () => { selectSeat(seat) })
+    }
 });
 
 pelicula.addEventListener("change", () => {
